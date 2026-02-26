@@ -1,0 +1,154 @@
+/* Background */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Main container */
+.login-box {
+  display: flex;
+  width: 100%;
+  max-width: 800px;
+  height: 350px; /* ✅ important for full image */
+  background-color: #f8f8f8;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* ✅ LEFT SIDE FULL */
+.login-left {
+  width: 50%;
+  background-color: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ✅ IMAGE FULL FIT */
+.msa-logo-full {
+  width: 395px;
+  height: 500px;
+  object-fit: contain; /* 🔥 change to cover if you want crop-fill */
+}
+
+/* RIGHT SIDE */
+.login-right {
+  width: 50%;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-title {
+  font-size: 26px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  background: #222;
+  color: white;
+  border-radius: 6px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+/* FORM */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  background: #f2f2f2;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+}
+
+.icon {
+  color: #666;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.input-group input {
+  border: none;
+  background: transparent;
+  outline: none;
+  flex: 1;
+  font-size: 16px;
+  color: #333;
+}
+
+/* BUTTON */
+.submit-btn {
+  background-color: #6ed37c;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3fb34f;
+}
+
+.error-text {
+  color: red;
+  font-size: 13px;
+  margin-top: -10px;
+  margin-bottom: 5px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .login-box {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .login-left,
+  .login-right {
+    width: 100%;
+  }
+
+  .login-left {
+    height: 200px;
+  }
+}
+
+/* input error state */
+.input-group.error {
+  border: 1px solid red;
+  background: #fff5f5;
+}
+
+/* placeholder error color */
+.input-group.error input::placeholder {
+  color: red;
+}
+
+/* center auth error */
+.error-text.center {
+  text-align: center;
+  margin-top: -10px;
+}

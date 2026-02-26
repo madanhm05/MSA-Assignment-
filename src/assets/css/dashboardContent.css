@@ -1,0 +1,51 @@
+.dashboard-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* border-radius: 4px; */
+  overflow: hidden;
+}
+
+/* Top bar */
+.top-bar {
+  height: 40px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+  background-color: #f9f9f9;
+}
+
+.add-icon {
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.add-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Main content */
+/* .main-content {
+  display: flex;
+  height: calc(100% - 40px);
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right section */
+/* .right-section {
+  width: 150px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 15px;
+  border-left: 1px solid #000;
+  gap: 10px;
+}  */

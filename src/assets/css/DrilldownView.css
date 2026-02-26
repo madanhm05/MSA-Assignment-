@@ -1,0 +1,52 @@
+
+
+/* page */
+.dd-page {
+ padding: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow-x: hidden;
+  background: #f5f7fa;
+  /* padding: 10px 14px;
+  background: #f5f7fa;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  width:100%; */
+}
+
+.dd-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.dd-filter {
+  margin-bottom: 12px;
+}
+
+.dd-grid {
+  flex: 1;
+}
+
+.dd-card {
+  border-radius: 10px;
+}
+
+.dd-right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dd-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.dd-grid .ant-row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

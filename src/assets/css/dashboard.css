@@ -1,0 +1,264 @@
+/* html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+ 
+} */
+
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;   /* 🚀 prevents outer scroll */
+}
+
+/* Overall page */
+/* .app-container {
+  height: 713px;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+} */
+/* .app-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+} */
+
+.app-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Top Navbar */
+.navbar {
+  height: 40px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #8e8d8d;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-left: 0;
+
+  position: fixed;   /* ✅ fixed */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  width: 1px;
+  height: 30px;
+  background-color: #dbdbdb;
+  /* margin: 0 10px; */
+  margin-bottom: 6px;
+}
+
+.navbar-right .icon {
+  font-size: 18px;
+  margin-left: 11px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s;
+  margin-bottom: 5px;
+}
+
+.navbar-right .icon:hover {
+  color: #7e7e7e;
+}
+
+/* Main layout (below navbar) */
+/* .main-layout {
+  display: flex;
+  flex: 1;
+} */
+
+/* .sidebar {
+  width: 60px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+ 
+  justify-content: space-between;
+  box-shadow: 0px 2px 13px #e4e4e4 !important;
+  padding: 2px 0;
+}
+
+.sidebar .icon {
+  font-size: 16px;
+  margin: 12px auto;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+  background-color: #f3f3f3;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar .icon:hover {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
+}
+
+.top-icons,
+.bottom-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logout-container {
+  position: relative;
+} */
+
+/* === Sidebar Layout === */
+.sidebar {
+  width: 60px;
+  background-color: #ffffff;
+
+  position: fixed;     /* ✅ fixed */
+  top: 40px;           /* below navbar */
+  left: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+}
+/* === Icon Style === */
+.sidebar .icon {
+  font-size: 34px;
+  cursor: pointer;
+  color: #333;
+  background-color: #f3f3f3;
+  padding: 8px;
+  margin: 5px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* .sidebar .top-icons .icon-home {
+  color: #fff;
+  background-color: black;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 40px;
+} */
+/* Hover Effect */
+.sidebar .icon:hover {
+  background-color: #000000;
+  color: #ffffff;
+  /* transform: translateY(-2px); */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Active Icon (Selected Page) */
+.sidebar .icon.active {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Top & Bottom icon groups */
+.top-icons,
+.bottom-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Logout popup */
+
+
+.content {
+  margin-left: 60px;     /* same as sidebar width */
+  margin-top: 40px;      /* same as navbar height */
+  height: calc(100vh - 40px);
+  overflow-y: auto;      /* ✅ only this scrolls */
+
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+
+/* ===== Logout Overlay ===== */
+.logout-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.2);
+
+  display: flex;
+  justify-content: flex-end;   /* push popup to right */
+  align-items: flex-end;       /* push popup to bottom */
+
+  padding: 40px;
+  z-index: 9999;
+}
+
+/* ===== Popup Box ===== */
+.logout-popup {
+  position: absolute;
+
+  bottom: 0;          /* align with logout icon */
+  left: 75px;         /* move right from sidebar */
+
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  padding: 15px;
+  width: 220px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+  z-index: 9999;
+}
+
+.logout-popup p {
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+.logout-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logout-buttons button {
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logout-buttons button:hover {
+  background-color: #ddd;
+}
+
+.logout-container {
+  position: relative;
+}

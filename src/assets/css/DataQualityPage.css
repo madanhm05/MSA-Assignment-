@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding-bottom: 5px;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6f9;
+}
+
+/* Loader */
+.loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Page wrapper */
+.page {
+  height: 100vh;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Title */
+.title {
+ 
+  font-weight: 600;
+  margin-bottom: 22px;
+  flex-shrink: 0;
+}
+
+/* Main content takes remaining height */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Top row (50%) */
+.top-row {
+  flex: 1;
+  display: flex;
+  gap: 12px;
+}
+
+/* Bottom row (50%) */
+.bottom-row {
+  flex: 1;
+}
+
+/* Card */
+.card {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Header */
+.card-header {
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+  background: #fafafa;
+}
+
+/* Body */
+.card-body {
+  padding: 8px 12px;   /* 🔥 Reduced padding */
+  overflow: hidden;    /* no internal scroll */
+}
+
+/* Items */
+.item {
+  margin-bottom: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.heading {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 4px 0;
+}
+
+.text {
+  font-size: 12px;
+  color: #555;
+  margin: 2px 0;
+}
+
+.card-body ul {
+  padding-left: 16px;
+}
+
+.card-body li {
+  font-size: 12px;
+  margin-bottom: 6px;
+}
